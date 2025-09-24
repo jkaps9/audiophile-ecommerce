@@ -237,6 +237,16 @@ header {
     }
   }
 }
+@media (min-width: 48rem) {
+  header {
+    .divider {
+      border: none;
+    }
+    & > .divider > .container {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+}
 
 @media (min-width: 64rem) {
   header {
@@ -256,6 +266,10 @@ header {
       display: flex;
       gap: 2rem;
       text-transform: uppercase;
+    }
+
+    .nav__item:hover {
+      color: var(--orange);
     }
   }
 }
