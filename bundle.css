@@ -63,36 +63,53 @@ ul {
 
 /* Header */
 header {
-  background-color: #000;
   background-image: url("/src/assets/home/mobile/image-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
   color: var(--white);
-}
-
-.navbar {
+  min-height: 37.5rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  flex-direction: column;
 
-.nav-toggle {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
+  .container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
 
-.nav {
-  visibility: hidden;
-  height: 0;
-  position: absolute;
-}
+  .navbar {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-.nav.visible {
-  visibility: visible;
-  height: auto;
-  position: relative;
+  .nav-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+  }
+
+  .nav.visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+  }
+
+  .hero {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 64rem) {
