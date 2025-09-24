@@ -130,6 +130,38 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
   padding: 1rem 2rem;
+
+  &:hover {
+    background-color: var(--pale-orange);
+  }
+}
+
+.btn--outline {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--black);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: var(--black);
+    color: var(--white);
+  }
+}
+
+.btn--text {
+  background-color: transparent;
+  color: var(--black);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+
+  &:hover {
+    color: var(--orange);
+  }
 }
 
 /* Header */
