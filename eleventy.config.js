@@ -1,3 +1,5 @@
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("bundle.css");
   eleventyConfig.addPassthroughCopy(
@@ -9,4 +11,5 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(
     "./src/assets/fonts/manrope-v20-latin-regular.woff2"
   );
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 };
