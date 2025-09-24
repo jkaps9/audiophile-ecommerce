@@ -46,4 +46,7 @@ body {
 
 header {
   background-color: #000;
+  background-image: url("/src/assets/home/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
