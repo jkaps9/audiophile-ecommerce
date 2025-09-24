@@ -27,6 +27,7 @@
 *::before,
 *::after {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -103,8 +104,7 @@ a {
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
 }
 
 /* Utilities */
@@ -130,6 +130,38 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
   padding: 1rem 2rem;
+
+  &:hover {
+    background-color: var(--pale-orange);
+  }
+}
+
+.btn--outline {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--black);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: var(--black);
+    color: var(--white);
+  }
+}
+
+.btn--text {
+  background-color: transparent;
+  color: var(--black);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+
+  &:hover {
+    color: var(--orange);
+  }
 }
 
 /* Header */
@@ -207,21 +239,23 @@ header {
 }
 
 @media (min-width: 64rem) {
-  .nav-toggle {
-    visibility: hidden;
-    height: 0;
-    position: absolute;
-  }
+  header {
+    .nav-toggle {
+      visibility: hidden;
+      height: 0;
+      position: absolute;
+    }
 
-  .nav {
-    visibility: visible;
-    height: auto;
-    position: relative;
-  }
+    .nav {
+      visibility: visible;
+      height: auto;
+      position: relative;
+    }
 
-  .nav__list {
-    display: flex;
-    gap: 2rem;
-    text-transform: uppercase;
+    .nav__list {
+      display: flex;
+      gap: 2rem;
+      text-transform: uppercase;
+    }
   }
 }
