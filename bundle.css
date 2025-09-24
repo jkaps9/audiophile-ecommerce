@@ -177,7 +177,8 @@ header {
   display: flex;
   flex-direction: column;
 
-  .container {
+  & > .container {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
   }
@@ -187,9 +188,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .divider {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -219,37 +217,36 @@ header {
     flex-grow: 1;
     text-align: center;
     display: flex;
-    .container {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
 
-      h1 {
-        margin-top: -0.5rem;
-      }
+    h1 {
+      margin-top: -0.5rem;
+    }
 
-      .btn--solid {
-        margin-top: 0.25rem;
-      }
+    .btn--solid {
+      margin-top: 0.25rem;
     }
   }
 }
 @media (min-width: 48rem) {
   header {
-    .divider {
-      border: none;
-    }
-    & > .divider > .container {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-image: url("/src/assets/home/tablet/image-header.jpg");
+    min-height: 45.5rem;
+
+    .hero {
+      p {
+        max-width: 40ch;
+      }
     }
   }
 }
 
 @media (min-width: 64rem) {
   header {
+    background-image: url("/src/assets/home/desktop/image-hero.jpg");
     .nav-toggle {
       visibility: hidden;
       height: 0;
@@ -270,6 +267,15 @@ header {
 
     .nav__item:hover {
       color: var(--orange);
+    }
+
+    .hero {
+      text-align: start;
+      align-items: start;
+
+      h1 {
+        max-width: 15ch;
+      }
     }
   }
 }
