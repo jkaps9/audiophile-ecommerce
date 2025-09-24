@@ -58,7 +58,7 @@ h6 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2.25rem, 1.6122rem + 2.7211vw, 3.5rem);
   line-height: 1.036;
   letter-spacing: 2px;
 }
@@ -137,6 +137,9 @@ header {
   background-image: url("/src/assets/home/mobile/image-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(25, 25, 25, 0.35);
+  background-blend-mode: overlay;
+
   color: var(--white);
   min-height: 37.5rem;
   display: flex;
@@ -181,6 +184,15 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
+
+    h1 {
+      margin-top: -0.5rem;
+    }
+
+    .btn--solid {
+      margin-top: 0.25rem;
+    }
   }
 }
 
