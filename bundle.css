@@ -61,6 +61,15 @@ ul {
   margin: 0 auto;
 }
 
+.btn--solid {
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+}
+
 /* Header */
 header {
   background-image: url("/src/assets/home/mobile/image-header.jpg");
@@ -109,6 +118,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 
