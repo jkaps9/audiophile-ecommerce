@@ -54,6 +54,13 @@ ul {
   padding: 0;
 }
 
+/* Utilities */
+.container {
+  width: 80%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
 /* Header */
 header {
   background-color: #000;
@@ -62,6 +69,18 @@ header {
   background-size: cover;
 
   color: var(--white);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .nav {
@@ -87,5 +106,11 @@ header {
     visibility: visible;
     height: auto;
     position: relative;
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 2rem;
+    text-transform: uppercase;
   }
 }
