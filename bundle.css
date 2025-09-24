@@ -146,7 +146,6 @@ header {
   flex-direction: column;
 
   .container {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
   }
@@ -156,6 +155,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .divider {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -163,6 +165,10 @@ header {
     background: transparent;
     border: none;
     cursor: pointer;
+  }
+
+  .logo {
+    display: flex;
   }
 
   .nav {
@@ -181,17 +187,21 @@ header {
     flex-grow: 1;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+    .container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
 
-    h1 {
-      margin-top: -0.5rem;
-    }
+      h1 {
+        margin-top: -0.5rem;
+      }
 
-    .btn--solid {
-      margin-top: 0.25rem;
+      .btn--solid {
+        margin-top: 0.25rem;
+      }
     }
   }
 }
