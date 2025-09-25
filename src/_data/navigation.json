@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "Headphones",
+      "url": "/headphones/"
+    },
+    {
+      "text": "Speakers",
+      "url": "/speakers/"
+    },
+    {
+      "text": "earphones",
+      "url": "/earphones/"
+    }
+  ]
+}

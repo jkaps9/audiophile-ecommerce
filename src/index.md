@@ -1,4 +1,4 @@
 ---
-title: "Audiophile e-commerce website"
+title: "Audiophile"
 layout: "layouts/home.html"
 ---
