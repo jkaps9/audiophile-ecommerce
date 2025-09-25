@@ -46,6 +46,8 @@ body {
   font-size: 15px;
   font-weight: 500;
   line-height: 1.6;
+
+  position: relative;
 }
 
 h1,
@@ -109,8 +111,8 @@ ul {
 
 /* Utilities */
 .container {
-  width: 80%;
   max-width: 1110px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -167,19 +169,17 @@ ul {
 
 /* Header */
 header {
-  background-image: url("/assets/home/mobile/image-header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(25, 25, 25, 0.35);
-  background-blend-mode: overlay;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
   color: var(--white);
-  min-height: 37.5rem;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-  & > .container {
-    flex-grow: 1;
+  .container {
     display: flex;
     flex-direction: column;
   }
@@ -189,7 +189,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav-toggle {
@@ -213,23 +212,35 @@ header {
     height: auto;
     position: relative;
   }
+}
 
-  .hero {
-    flex-grow: 1;
-    text-align: center;
+/* HERO */
+.hero {
+  color: var(--white);
+  background-image: url("/assets/home/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(25, 25, 25, 0.35);
+  background-blend-mode: overlay;
+
+  min-height: 37.5rem;
+  display: flex;
+
+  .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 1.5rem;
+  }
 
-    h1 {
-      margin-top: -0.5rem;
-    }
+  h1 {
+    margin-top: -0.5rem;
+  }
 
-    .btn--solid {
-      margin-top: 0.25rem;
-    }
+  .btn--solid {
+    margin-top: 0.25rem;
   }
 }
 
@@ -274,14 +285,11 @@ header {
 }
 
 @media (min-width: 48rem) {
-  header {
+  .hero {
     background-image: url("/assets/home/tablet/image-header.jpg");
     min-height: 45.5rem;
-
-    .hero {
-      p {
-        max-width: 40ch;
-      }
+    p {
+      max-width: 40ch;
     }
   }
 
@@ -300,7 +308,6 @@ header {
 
 @media (min-width: 64rem) {
   header {
-    background-image: url("/assets/home/desktop/image-hero.jpg");
     .nav-toggle {
       visibility: hidden;
       height: 0;
@@ -322,14 +329,17 @@ header {
     .nav__item:hover {
       color: var(--orange);
     }
+  }
 
-    .hero {
+  .hero {
+    background-image: url("/assets/home/desktop/image-hero.jpg");
+    .container {
       text-align: start;
       align-items: start;
+    }
 
-      h1 {
-        max-width: 15ch;
-      }
+    h1 {
+      max-width: 15ch;
     }
   }
 }
