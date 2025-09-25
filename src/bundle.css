@@ -184,6 +184,19 @@ img {
   justify-content: center;
 }
 
+.nav__item {
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__item:hover {
+  color: var(--orange);
+}
+
 /* Header */
 header {
   position: absolute;
@@ -484,16 +497,6 @@ header {
       visibility: visible;
       height: auto;
       position: relative;
-    }
-
-    .nav__list {
-      display: flex;
-      gap: 2rem;
-      text-transform: uppercase;
-    }
-
-    .nav__item:hover {
-      color: var(--orange);
     }
   }
 
