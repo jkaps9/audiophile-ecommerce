@@ -74,7 +74,31 @@
 <section class="featured-products">
   <div class="container">
     <div class="first card">
-      <img src="/assets/home/mobile/image-speaker-zx9.png" alt="" />
+      <picture>
+        <!-- Desktop (1240px and up) -->
+        <source
+          media="(min-width: 1240px)"
+          srcset="/assets/home/desktop/image-speaker-zx9.png"
+        />
+
+        <!-- Tablet (768px to 1439px) -->
+        <source
+          media="(min-width: 768px)"
+          srcset="/assets/home/tablet/image-speaker-zx9.png"
+        />
+
+        <!-- Mobile (up to 767px) -->
+        <source
+          media="(max-width: 767px)"
+          srcset="/assets/home/mobile/image-speaker-zx9.png"
+        />
+
+        <!-- Fallback image -->
+        <img
+          src="/assets/home/mobile/image-speaker-zx9.png"
+          alt="zx9 speaker"
+        />
+      </picture>
       <div class="content">
         <h1>ZX9<br />Speaker</h1>
         <p>

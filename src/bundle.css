@@ -324,6 +324,7 @@ header {
       gap: 1.5rem;
     }
 
+    picture,
     img {
       max-height: 207px;
       width: auto;
@@ -405,6 +406,7 @@ header {
       padding-right: 10.625rem;
       gap: 4rem;
 
+      picture,
       img {
         max-height: 237px;
       }
@@ -468,25 +470,27 @@ header {
 
   .featured-products {
     .first {
-      padding-top: 8rem;
-      padding-bottom: 8rem;
+      padding: 8rem 7rem;
       flex-direction: row;
       justify-content: space-between;
       max-height: 35rem;
       overflow: hidden;
+      gap: 8.625rem;
 
       .content {
         text-align: start;
         align-items: flex-start;
+        max-width: 21.875rem;
       }
 
+      picture,
       img {
+        height: 493px;
+        width: 410px;
+        max-width: none;
+        max-height: none;
         align-self: flex-end;
-        margin-bottom: -4.75rem;
-      }
-
-      p {
-        max-width: 35ch;
+        margin-bottom: -9rem;
       }
     }
 
