@@ -276,7 +276,7 @@ header {
 
 /* Categories */
 .categories {
-  padding-top: 4rem;
+  margin-top: clamp(4rem, 2.7676rem + 5.2582vw, 7.5rem);
   .container {
     display: flex;
     flex-direction: column;
@@ -285,12 +285,12 @@ header {
 
   .category {
     background-color: var(--light-grey);
-    margin-bottom: 35px;
+    margin-bottom: 2.25rem;
 
     img {
       width: auto;
-      height: 104px;
-      margin-top: -35px;
+      height: clamp(6.75rem, 5.6276rem + 4.7887vw, 9.9375rem);
+      margin-top: -2.25rem;
     }
 
     p {
@@ -311,7 +311,7 @@ header {
 
 /* Featured Products */
 .featured-products {
-  margin: 7.5rem 0;
+  margin: clamp(7.5rem, 5.7394rem + 7.5117vw, 12.5rem) 0;
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -386,7 +386,7 @@ header {
 
 /* ABOUT */
 .about {
-  margin: 7.5rem 0;
+  margin: clamp(7.5rem, 5.7394rem + 7.5117vw, 12.5rem) 0;
   .container {
     display: flex;
     flex-direction: column;
