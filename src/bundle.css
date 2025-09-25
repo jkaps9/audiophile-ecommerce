@@ -639,4 +639,25 @@ footer {
       margin: 0;
     }
   }
+
+  footer {
+    .container {
+      grid-template-rows: repeat(3, auto);
+    }
+
+    .logo,
+    .nav__list,
+    p:not(.copyright) {
+      grid-column: span 1;
+    }
+
+    .copyright {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    .nav__list {
+      justify-self: end;
+    }
+  }
 }
