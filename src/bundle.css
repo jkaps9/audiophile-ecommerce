@@ -68,7 +68,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 1.4859rem + 1.1268vw, 2.5rem);
   line-height: 1.1;
   letter-spacing: 1.5px;
 }
@@ -298,6 +298,7 @@ header {
 
 /* Featured Products */
 .featured-products {
+  margin: 7.5rem 0;
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -370,6 +371,35 @@ header {
   }
 }
 
+/* ABOUT */
+.about {
+  margin: 7.5rem 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .image {
+    min-height: 18.75rem;
+    background: url("/assets/shared/mobile/image-best-gear.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  p {
+    opacity: 0.5;
+  }
+}
+
 @media (min-width: 48rem) {
   .hero {
     background-image: url("/assets/home/tablet/image-header.jpg");
@@ -427,6 +457,17 @@ header {
     .third,
     .third-image {
       min-height: 20rem;
+    }
+  }
+
+  .about {
+    .image {
+      background: url("/assets/shared/tablet/image-best-gear.jpg");
+    }
+
+    .content {
+      max-width: 35.8125rem;
+      margin: 0 auto;
     }
   }
 }
@@ -505,6 +546,27 @@ header {
     .second,
     .third {
       padding-left: 6rem;
+    }
+  }
+
+  .about {
+    .container {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      gap: 7.8125rem;
+    }
+
+    .image {
+      background: url("/assets/shared/desktop/image-best-gear.jpg");
+      min-height: 36.75rem;
+      width: 36.75rem;
+    }
+
+    .content {
+      max-width: 27.8125rem;
+      text-align: start;
+      margin: 0;
     }
   }
 }
