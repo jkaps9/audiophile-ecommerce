@@ -442,6 +442,7 @@ footer {
 
   .socials__list {
     display: flex;
+    align-items: center;
     gap: 1rem;
   }
 }
@@ -514,6 +515,39 @@ footer {
     .content {
       max-width: 35.8125rem;
       margin: 0 auto;
+    }
+  }
+
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: start;
+
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto auto 6rem;
+      place-items: start;
+      row-gap: 2rem;
+    }
+
+    .logo,
+    .nav__list,
+    p:not(.copyright) {
+      grid-column: span 2;
+    }
+
+    .copyright {
+      align-self: end;
+    }
+
+    .socials__list {
+      justify-self: end;
+      align-self: end;
+    }
+
+    .nav__list {
+      flex-direction: row;
+      gap: 2rem;
     }
   }
 }
