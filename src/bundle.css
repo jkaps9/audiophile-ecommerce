@@ -116,7 +116,7 @@ img {
 /* Utilities */
 .container {
   max-width: 1110px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -292,6 +292,54 @@ header {
       gap: 0.75rem;
       width: 100%;
     }
+  }
+}
+
+/* Featured Products */
+.featured-products {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .first {
+    background-color: var(--orange);
+    color: var(--white);
+    text-align: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    min-height: 37.5rem;
+    padding: 0 1.5rem 3.5rem;
+
+    h2 {
+      max-width: 10ch;
+    }
+
+    p {
+      opacity: 0.75;
+    }
+
+    .btn--solid {
+      background-color: var(--black);
+    }
+  }
+
+  .second {
+    min-height: 20rem;
+  }
+
+  .second,
+  .third {
+    background-color: var(--light-grey);
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .third-image,
+  .third {
+    min-height: 12.5rem;
   }
 }
 
