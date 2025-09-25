@@ -37,6 +37,7 @@
   --off-black: #101010;
   --off-white: #fafafa;
   --light-grey: #f1f1f1;
+  --dark-grey: #4c4c4c;
   --white: #ffffff;
   --black: #000000;
 }
@@ -298,8 +299,8 @@ header {
 /* Featured Products */
 .featured-products {
   .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
@@ -312,14 +313,20 @@ header {
 
     color: var(--white);
     text-align: center;
-    gap: 1.5rem;
+    gap: 2rem;
     min-height: 37.5rem;
     padding: 3.5rem 1.5rem;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
 
     img {
       max-height: 207px;
       width: auto;
-      margin-bottom: 0.5rem;
     }
 
     p {
@@ -328,11 +335,18 @@ header {
 
     .btn--solid {
       background-color: var(--black);
+
+      &:hover {
+        background-color: var(--dark-grey);
+      }
     }
   }
 
   .second {
     min-height: 20rem;
+    background: url("/assets/home/mobile/image-speaker-zx7.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .second,
@@ -375,6 +389,44 @@ header {
       flex-grow: 1;
     }
   }
+
+  .featured-products {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .first,
+    .second {
+      grid-column: span 2;
+    }
+
+    .first {
+      min-height: 45rem;
+      padding-left: 10.625rem;
+      padding-right: 10.625rem;
+      gap: 4rem;
+
+      img {
+        max-height: 237px;
+      }
+
+      .btn--solid {
+        margin-top: 1rem;
+      }
+    }
+
+    .second {
+      background: url("/assets/home/tablet/image-speaker-zx7.jpg");
+    }
+
+    .third-image {
+      background-image: url("/assets/home/tablet/image-earphones-yx1.jpg");
+    }
+
+    .third,
+    .third-image {
+      min-height: 20rem;
+    }
+  }
 }
 
 @media (min-width: 64rem) {
@@ -411,6 +463,44 @@ header {
 
     h1 {
       max-width: 15ch;
+    }
+  }
+
+  .featured-products {
+    .first {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      flex-direction: row;
+      justify-content: space-between;
+      max-height: 35rem;
+      overflow: hidden;
+
+      .content {
+        text-align: start;
+        align-items: flex-start;
+      }
+
+      img {
+        align-self: flex-end;
+        margin-bottom: -4.75rem;
+      }
+
+      p {
+        max-width: 35ch;
+      }
+    }
+
+    .second {
+      background: url("/assets/home/desktop/image-speaker-zx7.jpg");
+    }
+
+    .third-image {
+      background-image: url("/assets/home/desktop/image-earphones-yx1.jpg");
+    }
+
+    .second,
+    .third {
+      padding-left: 6rem;
     }
   }
 }
