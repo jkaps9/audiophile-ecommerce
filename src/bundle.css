@@ -305,15 +305,21 @@ header {
 
   .first {
     background-color: var(--orange);
+    background-image: url("/assets/home/desktop/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -8.75rem;
+
     color: var(--white);
     text-align: center;
-    justify-content: flex-end;
     gap: 1.5rem;
     min-height: 37.5rem;
-    padding: 0 1.5rem 3.5rem;
+    padding: 3.5rem 1.5rem;
 
-    h2 {
-      max-width: 10ch;
+    img {
+      max-height: 207px;
+      width: auto;
+      margin-bottom: 0.5rem;
     }
 
     p {
@@ -340,6 +346,12 @@ header {
   .third-image,
   .third {
     min-height: 12.5rem;
+  }
+
+  .third-image {
+    background-image: url("/assets/home/mobile/image-earphones-yx1.jpg");
+    background-repeat: none;
+    background-size: cover;
   }
 }
 
