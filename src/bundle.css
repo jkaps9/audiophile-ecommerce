@@ -444,6 +444,10 @@ footer {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    li:hover svg path {
+      fill: var(--orange);
+    }
   }
 }
 
@@ -581,10 +585,10 @@ footer {
 
   .featured-products {
     .first {
-      padding: 8rem 7rem;
+      padding: 8rem 6rem;
       flex-direction: row;
       justify-content: space-between;
-      max-height: 35rem;
+      min-height: 35rem;
       overflow: hidden;
       gap: 8.625rem;
 
