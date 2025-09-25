@@ -242,6 +242,10 @@ header {
     height: auto;
     position: relative;
   }
+
+  a.cart:hover svg path {
+    fill: var(--orange);
+  }
 }
 
 /* HERO */
