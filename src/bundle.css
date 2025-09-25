@@ -4,7 +4,7 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  src: url("src/assets/fonts/manrope-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/assets/fonts/manrope-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* manrope-500 - latin */
 @font-face {
@@ -12,7 +12,7 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
-  src: url("src/assets/fonts/manrope-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/assets/fonts/manrope-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* manrope-700 - latin */
 @font-face {
@@ -20,7 +20,7 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
-  src: url("src/assets/fonts/manrope-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/assets/fonts/manrope-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 *,
@@ -167,7 +167,7 @@ ul {
 
 /* Header */
 header {
-  background-image: url("/src/assets/home/mobile/image-header.jpg");
+  background-image: url("/assets/home/mobile/image-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(25, 25, 25, 0.35);
@@ -275,7 +275,7 @@ header {
 
 @media (min-width: 48rem) {
   header {
-    background-image: url("/src/assets/home/tablet/image-header.jpg");
+    background-image: url("/assets/home/tablet/image-header.jpg");
     min-height: 45.5rem;
 
     .hero {
@@ -300,7 +300,7 @@ header {
 
 @media (min-width: 64rem) {
   header {
-    background-image: url("/src/assets/home/desktop/image-hero.jpg");
+    background-image: url("/assets/home/desktop/image-hero.jpg");
     .nav-toggle {
       visibility: hidden;
       height: 0;

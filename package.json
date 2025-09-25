@@ -2,10 +2,11 @@
   "name": "audiophile-ecommerce",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=/audiophile-ecommerce/"
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/audiophile-ecommerce/",
+    "start": "npx eleventy --serve"
   },
   "keywords": [],
   "author": "",
