@@ -109,6 +109,10 @@ ul {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* Utilities */
 .container {
   max-width: 1110px;
@@ -169,6 +173,14 @@ ul {
 
 .accent-text {
   color: var(--orange);
+}
+
+.card {
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Header */
@@ -259,11 +271,6 @@ header {
 
   .category {
     background-color: var(--light-grey);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
     margin-bottom: 35px;
 
     img {
