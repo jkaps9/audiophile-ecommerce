@@ -413,6 +413,39 @@ header {
   }
 }
 
+/* FOOTER */
+footer {
+  background-color: var(--off-black);
+  color: var(--white);
+  text-align: center;
+  padding: 3.25rem 0 2.5rem;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 3rem;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  p {
+    opacity: 0.5;
+  }
+
+  .copyright {
+    font-weight: 700;
+  }
+
+  .socials__list {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
 @media (min-width: 48rem) {
   .hero {
     background-image: url("/assets/home/tablet/image-header.jpg");
