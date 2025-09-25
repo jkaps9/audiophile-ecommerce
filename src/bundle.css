@@ -167,6 +167,10 @@ ul {
   }
 }
 
+.accent-text {
+  color: var(--orange);
+}
+
 /* Header */
 header {
   position: absolute;
