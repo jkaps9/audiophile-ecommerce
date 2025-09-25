@@ -139,7 +139,7 @@ ul {
 }
 
 .btn--outline {
-  background-color: var(--white);
+  background-color: transparent;
   color: var(--black);
   border: 1px solid var(--black);
   font-size: 0.8125rem;
