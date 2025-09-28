@@ -10,6 +10,7 @@ module.exports = (config) => {
 
   config.addCollection("products", (collection) => {
     const myData = collection.getAll()[0].data.data;
+    myData.sort((a, b) => (a === b ? 0 : a ? -1 : 1));
     return myData;
   });
 
