@@ -20,6 +20,12 @@
 .products {
   margin-top: 4rem;
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5rem;
+  }
+
   .product-card {
     gap: 2rem;
 
@@ -38,6 +44,34 @@
       p {
         opacity: 0.5;
       }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .products {
+    .product-card {
+      min-height: 35rem;
+      flex-direction: row;
+      gap: 7.8125rem;
+      .content {
+        max-width: 40%;
+        text-align: start;
+        align-items: flex-start;
+        gap: 2rem;
+
+        .topper {
+          margin-bottom: -1rem;
+        }
+
+        a.btn--solid {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    .product-card:nth-child(even) {
+      flex-direction: row-reverse;
     }
   }
 }
