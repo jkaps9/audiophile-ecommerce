@@ -1,8 +1,19 @@
 <div class="card product-card">
-  <img
-    src="../../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg"
-    alt="XX99 Mark II Headphones"
-  />
+  <picture>
+    <source
+      media="(min-width: 1024px)"
+      srcset="../.{{ product.image.desktop }}"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="../.{{ product.image.tablet }}"
+    />
+    <img
+      src="../.{{ product.image.mobile }}"
+      alt="{{ product.name }}"
+      loading="lazy"
+    />
+  </picture>
   <div class="content">
     {% if product.new %}
       <span class="topper">New product</span>
@@ -10,7 +21,7 @@
     <h1>{{ product.name }}</h1>
     <p>{{ product.description }}</p>
     <a
-      href="/products/{{ product.slug }}/index.html"
+      href="/products/{{ product.slug }}/"
       class="btn--solid"
     >
       See Product
