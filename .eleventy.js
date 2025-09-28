@@ -8,6 +8,11 @@ module.exports = (config) => {
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy("./src/assets");
 
+  config.addCollection("products", (collection) => {
+    const myData = collection.getAll()[0].data.data;
+    return myData;
+  });
+
   // Configure SCSS files
   config.addExtension("scss", {
     outputFileExtension: "css",
