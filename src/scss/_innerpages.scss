@@ -1,0 +1,18 @@
+@use "variables";
+@use "sass:map";
+
+// Page Header
+.page-header {
+  min-height: 12rem;
+  background-color: map.get(variables.$colors, "black");
+  color: map.get(variables.$colors, "white");
+  display: flex;
+
+  .container {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+}
