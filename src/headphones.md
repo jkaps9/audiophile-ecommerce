@@ -1,7 +1,7 @@
 ---
 title: "Audiophile | Headphones"
 pageTitle: "Headphones"
-layout: "layouts/headphones.html"
+layout: "layouts/category.html"
 permalink: "/headphones/index.html"
 ---
 
