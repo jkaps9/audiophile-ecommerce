@@ -4,15 +4,13 @@
     alt="XX99 Mark II Headphones"
   />
   <div class="content">
-    <span class="topper">New product</span>
-    <h1>XX99 Mark II Headphones</h1>
-    <p>
-      The new XX99 Mark II headphones is the pinnacle of pristine audio. It
-      redefines your premium headphone experience by reproducing the balanced
-      depth and precision of studio-quality sound.
-    </p>
+    {% if product.new %}
+      <span class="topper">New product</span>
+    {% endif %}
+    <h1>{{ product.name }}</h1>
+    <p>{{ product.description }}</p>
     <a
-      href="#"
+      href="/products/{{ product.slug }}/index.html"
       class="btn--solid"
     >
       See Product

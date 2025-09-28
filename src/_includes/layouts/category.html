@@ -2,7 +2,13 @@
 {% block content %}
   {% include "partials/page-header.html" %}
   <section class="products">
-    <div class="container">{% include "partials/product-card.html" %}</div>
+    <div class="container">
+      {% for product in collections.products %}
+        {% if product.category == category %}
+          {% include "partials/product-card.html" %}
+        {% endif %}
+      {% endfor %}
+    </div>
   </section>
 
   {% include "partials/category-cards.html" %}
