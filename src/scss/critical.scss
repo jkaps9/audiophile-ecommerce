@@ -15,8 +15,8 @@ header {
   color: map.get(variables.$colors, "white");
   display: flex;
   flex-direction: column;
-  $border-color: rgba(map.get(variables.$colors, "white"), 0.1);
-  border-bottom: 1px solid $border-color;
+  $header-border-color: rgba(map.get(variables.$colors, "white"), 0.1);
+  border-bottom: 1px solid $header-border-color;
 
   .container {
     display: flex;
