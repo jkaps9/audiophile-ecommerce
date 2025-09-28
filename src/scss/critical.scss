@@ -96,7 +96,7 @@ header {
   }
 
   .category {
-    background-color: map.get(variables.$colors, "light")-grey;
+    background-color: map.get(variables.$colors, "light-grey");
     margin-bottom: 2.25rem;
 
     img {
@@ -164,7 +164,7 @@ header {
       background-color: map.get(variables.$colors, "black");
 
       &:hover {
-        background-color: map.get(variables.$colors, "dark")-grey;
+        background-color: map.get(variables.$colors, "dark-grey");
       }
     }
   }
@@ -178,7 +178,7 @@ header {
 
   .second,
   .third {
-    background-color: map.get(variables.$colors, "light")-grey;
+    background-color: map.get(variables.$colors, "light-grey");
     align-items: flex-start;
     gap: 2rem;
     padding: 0 1.5rem;
@@ -227,7 +227,7 @@ header {
 
 /* FOOTER */
 footer {
-  background-color: map.get(variables.$colors, "off")-black;
+  background-color: map.get(variables.$colors, "off-black");
   color: map.get(variables.$colors, "white");
   text-align: center;
   padding: 3.25rem 0 2.5rem;
