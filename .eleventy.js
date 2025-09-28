@@ -7,7 +7,6 @@ module.exports = (config) => {
 
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy("./src/assets");
-  config.addPassthroughCopy("./src/bundle.css");
 
   // Configure SCSS files
   config.addExtension("scss", {
