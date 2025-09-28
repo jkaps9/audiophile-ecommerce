@@ -3,7 +3,7 @@
 
 // Page Header
 .page-header {
-  min-height: 12rem;
+  min-height: clamp(12rem, 8.831rem + 13.5211vw, 21rem);
   background-color: map.get(variables.$colors, "black");
   color: map.get(variables.$colors, "white");
   display: flex;
@@ -13,12 +13,13 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 2rem;
+    padding-bottom: clamp(2rem, 0.5695rem + 6.1033vw, 6.0625rem);
   }
 }
 
 .products {
   margin-top: 4rem;
+  margin-bottom: 6rem;
 
   .container {
     display: flex;
@@ -50,6 +51,9 @@
 
 @media (min-width: 64rem) {
   .products {
+    margin-top: 10rem;
+    margin-bottom: 12rem;
+
     .product-card {
       min-height: 35rem;
       flex-direction: row;
