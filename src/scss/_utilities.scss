@@ -1,0 +1,84 @@
+@use "variables";
+@use "sass:map";
+
+.container {
+  max-width: 1110px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.topper {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 10px;
+  color: map.get(variables.$colors, "orange");
+}
+
+.btn--solid {
+  background-color: map.get(variables.$colors, "orange");
+  color: map.get(variables.$colors, "white");
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: map.get(variables.$colors, "pale-orange");
+  }
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: map.get(variables.$colors, "black");
+  border: 1px solid map.get(variables.$colors, "black");
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: map.get(variables.$colors, "black");
+    color: map.get(variables.$colors, "white");
+  }
+}
+
+.btn--text {
+  background-color: transparent;
+  color: map.get(variables.$colors, "black");
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  opacity: 0.5;
+
+  &:hover {
+    color: map.get(variables.$colors, "orange");
+  }
+}
+
+.accent-text {
+  color: map.get(variables.$colors, "orange");
+}
+
+.card {
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__item {
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__item:hover {
+  color: map.get(variables.$colors, "orange");
+}
