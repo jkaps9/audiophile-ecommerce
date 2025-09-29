@@ -58,6 +58,29 @@
   }
 }
 
+.input--number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: map.get(variables.$colors, "light-grey");
+  max-width: 7.5rem;
+
+  .decrease,
+  .increase {
+    background-color: transparent;
+    border: none;
+  }
+
+  .decrease,
+  .increase,
+  .quantity {
+    max-height: 1.125rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .accent-text {
   color: map.get(variables.$colors, "orange");
 }
