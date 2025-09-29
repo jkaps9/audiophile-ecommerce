@@ -79,9 +79,10 @@
   .increase {
     background-color: transparent;
     border: none;
-
+    opacity: 0.25;
     &:hover {
       color: map.get(variables.$colors, "orange");
+      opacity: 1;
     }
   }
 

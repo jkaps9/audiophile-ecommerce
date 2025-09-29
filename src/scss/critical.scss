@@ -124,13 +124,6 @@ header {
     min-width: 6rem;
     padding: 0.5em;
     padding-left: 0.75em;
-
-    button {
-      opacity: 0.25;
-      &:hover {
-        opacity: 1;
-      }
-    }
   }
 
   .total {
