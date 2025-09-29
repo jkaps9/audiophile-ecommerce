@@ -41,6 +41,10 @@ module.exports = (config) => {
     },
   });
 
+  config.addFilter("commaize", function (num) {
+    return num.toLocaleString("en-us"); // Use "en-us" for comma separators
+  });
+
   return {
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",

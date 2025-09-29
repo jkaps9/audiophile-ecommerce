@@ -57,10 +57,18 @@
   }
 }
 
-// Product Details
 body:has(main > section.product-details) header {
   position: relative;
   background-color: map.get(variables.$colors, "black");
+}
+
+.product-details {
+  .product-card {
+    .content {
+      text-align: start;
+      align-items: flex-start;
+    }
+  }
 }
 
 @media (min-width: 64rem) {
