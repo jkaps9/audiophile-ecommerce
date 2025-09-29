@@ -1,3 +1,7 @@
+import { CartManager } from "./scripts/cart-manager.js";
+
+const cartManager = new CartManager();
+
 const cartButton = document.querySelector(".cart");
 const cartModal = document.querySelector(".cart-modal");
 const modalBackdrop = document.querySelector(".modal-backdrop");

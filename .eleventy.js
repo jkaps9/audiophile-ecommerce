@@ -9,6 +9,7 @@ module.exports = (config) => {
 
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy("./src/assets");
+  config.addPassthroughCopy("./src/scripts");
   config.addPassthroughCopy("./src/main.js");
 
   config.addCollection("products", (collection) => {
