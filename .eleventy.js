@@ -7,6 +7,7 @@ module.exports = (config) => {
 
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy("./src/assets");
+  config.addPassthroughCopy("./src/main.js");
 
   config.addCollection("products", (collection) => {
     const myData = collection.getAll()[0].data.data;
