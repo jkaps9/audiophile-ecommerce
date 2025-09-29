@@ -49,6 +49,28 @@
   }
 }
 
+// Product Details
+body:has(main > section.product-details) header {
+  position: relative;
+  background-color: map.get(variables.$colors, "black");
+}
+
+.product-details {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  img {
+    border-radius: 0.5rem;
+  }
+
+  button.btn--solid {
+    border: none;
+  }
+}
+
 @media (min-width: 64rem) {
   .products {
     margin-top: 10rem;
@@ -76,6 +98,13 @@
 
     .product-card:nth-child(even) {
       flex-direction: row-reverse;
+    }
+  }
+
+  .product-details {
+    .container {
+      flex-direction: row;
+      gap: 7.8125rem;
     }
   }
 }

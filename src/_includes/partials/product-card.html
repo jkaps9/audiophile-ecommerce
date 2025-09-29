@@ -20,11 +20,23 @@
     {% endif %}
     <h1>{{ product.name }}</h1>
     <p>{{ product.description }}</p>
-    <a
-      href="/products/{{ product.slug }}/"
-      class="btn--solid"
-    >
-      See Product
-    </a>
+    {% if isDetailPage %}
+      <p class="price">$ {{ product.price }}</p>
+      <div class="buttons">
+        <button
+          class="btn--solid"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    {% else %}
+      <a
+        href="/products/{{ product.slug }}/"
+        class="btn--solid"
+      >
+        See Product
+      </a>
+    {% endif %}
   </div>
 </div>
