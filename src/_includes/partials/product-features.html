@@ -1,6 +1,8 @@
 <div class="features">
   <h2>Features</h2>
-  <p>{{ product.features }}</p>
+  {% if product.features %}
+    <p>{{ product.features | markdown | safe }}</p>
+  {% endif %}
 </div>
 <div class="in-the-box">
   <h2>In The Box</h2>

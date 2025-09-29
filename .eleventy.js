@@ -1,5 +1,7 @@
 const path = require("node:path");
 const sass = require("sass");
+const markdownIt = require("markdown-it");
+const MarkdownIt = require("markdown-it");
 
 module.exports = (config) => {
   // add SCSS template format
@@ -44,6 +46,14 @@ module.exports = (config) => {
 
   config.addFilter("commaize", function (num) {
     return num.toLocaleString("en-us"); // Use "en-us" for comma separators
+  });
+
+  const md = new MarkdownIt({
+    html: true,
+  });
+
+  config.addFilter("markdown", (content) => {
+    return md.render(content);
   });
 
   return {
