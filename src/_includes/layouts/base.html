@@ -18,10 +18,8 @@
   </head>
   <body>
     {% include "partials/site-head.html" %}
-    <main>
-      <div class="overlay"></div>
-      {% block content %}{% endblock %}
-    </main>
+    <div class="modal-backdrop visually-hidden"></div>
+    <main>{% block content %}{% endblock %}</main>
     {% include "partials/site-footer.html" %}
   </body>
 </html>

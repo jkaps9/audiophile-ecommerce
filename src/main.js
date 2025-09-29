@@ -1,5 +1,7 @@
 const cartButton = document.querySelector(".cart");
 const cartModal = document.querySelector(".cart-modal");
+const modalBackdrop = document.querySelector(".modal-backdrop");
+
 const removeAllFromCartButton = document.querySelector(
   ".cart-modal .btn--text",
 );
@@ -8,6 +10,7 @@ if (cartButton) {
   cartButton.addEventListener("click", () => {
     if (cartModal) {
       cartModal.classList.toggle("visually-hidden");
+      modalBackdrop.classList.toggle("visually-hidden");
     }
   });
 }
