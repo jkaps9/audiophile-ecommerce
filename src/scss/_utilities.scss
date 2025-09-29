@@ -55,6 +55,7 @@
 
   &:hover {
     color: map.get(variables.$colors, "orange");
+    opacity: 1;
   }
 }
 
