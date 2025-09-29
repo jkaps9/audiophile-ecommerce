@@ -1,3 +1,14 @@
+const cartButton = document.querySelector(".cart");
+const cartModal = document.querySelector(".cart-modal");
+
+if (cartButton) {
+  cartButton.addEventListener("click", () => {
+    if (cartModal) {
+      cartModal.classList.toggle("visible");
+    }
+  });
+}
+
 const decreaseButton = document.querySelector(".input--number .decrease");
 const quantity = document.querySelector(".input--number .quantity");
 const increaseButton = document.querySelector(".input--number .increase");

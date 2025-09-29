@@ -65,6 +65,20 @@ header {
   }
 }
 
+.cart-modal {
+  background-color: map.get(variables.$colors, "white");
+  color: map.get(variables.$colors, "black");
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  button {
+    border: none;
+  }
+}
+
 /* HERO */
 .hero {
   color: map.get(variables.$colors, "white");
