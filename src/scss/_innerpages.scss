@@ -1,7 +1,6 @@
 @use "variables";
 @use "sass:map";
 
-// Page Header
 .page-header {
   min-height: clamp(12rem, 8.831rem + 13.5211vw, 21rem);
   background-color: map.get(variables.$colors, "black");
@@ -17,7 +16,29 @@
   }
 }
 
-.products {
+.product-card {
+  gap: 2rem;
+
+  img {
+    border-radius: 0.5rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+
+    p {
+      opacity: 0.5;
+    }
+  }
+}
+
+.products,
+.product-details {
   margin-top: 4rem;
   margin-bottom: 6rem;
 
@@ -27,25 +48,8 @@
     gap: 7.5rem;
   }
 
-  .product-card {
-    gap: 2rem;
-
-    img {
-      border-radius: 0.5rem;
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      text-align: center;
-
-      p {
-        opacity: 0.5;
-      }
-    }
+  button.btn--solid {
+    border: none;
   }
 }
 
@@ -55,56 +59,34 @@ body:has(main > section.product-details) header {
   background-color: map.get(variables.$colors, "black");
 }
 
-.product-details {
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  img {
-    border-radius: 0.5rem;
-  }
-
-  button.btn--solid {
-    border: none;
-  }
-}
-
 @media (min-width: 64rem) {
-  .products {
-    margin-top: 10rem;
-    margin-bottom: 12rem;
+  .product-card {
+    min-height: 35rem;
+    flex-direction: row;
+    gap: 7.8125rem;
+    .content {
+      max-width: 40%;
+      text-align: start;
+      align-items: flex-start;
+      gap: 2rem;
 
-    .product-card {
-      min-height: 35rem;
-      flex-direction: row;
-      gap: 7.8125rem;
-      .content {
-        max-width: 40%;
-        text-align: start;
-        align-items: flex-start;
-        gap: 2rem;
+      .topper {
+        margin-bottom: -1rem;
+      }
 
-        .topper {
-          margin-bottom: -1rem;
-        }
-
-        a.btn--solid {
-          margin-top: 0.5rem;
-        }
+      a.btn--solid {
+        margin-top: 0.5rem;
       }
     }
-
-    .product-card:nth-child(even) {
-      flex-direction: row-reverse;
-    }
   }
 
+  .product-card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .products,
   .product-details {
-    .container {
-      flex-direction: row;
-      gap: 7.8125rem;
-    }
+    margin-top: 10rem;
+    margin-bottom: 12rem;
   }
 }
