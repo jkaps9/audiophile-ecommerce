@@ -10,57 +10,25 @@
 
   <section class="product-images">
     <div class="container">
-      <div class="product-gallery-image">
-        <picture>
-          <source
-            media="(min-width: 1024px)"
-            srcset="../.{{ product.gallery.first.desktop }}"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="../.{{ product.gallery.first.tablet }}"
-          />
-          <img
-            src="../.{{ product.gallery.first.mobile }}"
-            alt="{{ product.name }}"
-            loading="lazy"
-          />
-        </picture>
-      </div>
-      <div class="product-gallery-image">
-        <picture>
-          <source
-            media="(min-width: 1024px)"
-            srcset="../.{{ product.gallery.second.desktop }}"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="../.{{ product.gallery.second.tablet }}"
-          />
-          <img
-            src="../.{{ product.gallery.second.mobile }}"
-            alt="{{ product.name }}"
-            loading="lazy"
-          />
-        </picture>
-      </div>
-      <div class="product-gallery-image">
-        <picture>
-          <source
-            media="(min-width: 1024px)"
-            srcset="../.{{ product.gallery.third.desktop }}"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="../.{{ product.gallery.third.tablet }}"
-          />
-          <img
-            src="../.{{ product.gallery.third.mobile }}"
-            alt="{{ product.name }}"
-            loading="lazy"
-          />
-        </picture>
-      </div>
+      {% for key, image in product.gallery %}
+        <div class="product-gallery-image">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="../.{{ image.desktop }}"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="../.{{ image.tablet }}"
+            />
+            <img
+              src="../.{{ image.mobile }}"
+              alt="{{ product.name }}"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      {% endfor %}
     </div>
   </section>
 
