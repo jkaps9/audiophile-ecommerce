@@ -21,29 +21,33 @@ if (removeAllFromCartButton) {
   });
 }
 
-const decreaseButton = document.querySelector(".input--number .decrease");
-const quantity = document.querySelector(".input--number .quantity");
-const increaseButton = document.querySelector(".input--number .increase");
+const inputNumberButtons = document.querySelectorAll(".input--number");
 
-if (decreaseButton) {
-  decreaseButton.addEventListener("click", () => {
-    let currentyQuantity = Number(quantity.textContent);
-    if (typeof currentyQuantity === "number" && currentyQuantity > 0) {
-      currentyQuantity--;
-      quantity.textContent = currentyQuantity;
-    }
-  });
-}
+inputNumberButtons.forEach((inputNumberButton) => {
+  const decreaseButton = inputNumberButton.querySelector(".decrease");
+  const quantity = inputNumberButton.querySelector(".quantity");
+  const increaseButton = inputNumberButton.querySelector(".increase");
 
-if (increaseButton) {
-  increaseButton.addEventListener("click", () => {
-    let currentyQuantity = Number(quantity.textContent);
-    if (typeof currentyQuantity === "number") {
-      currentyQuantity++;
-      quantity.textContent = currentyQuantity;
-    }
-  });
-}
+  if (decreaseButton) {
+    decreaseButton.addEventListener("click", () => {
+      let currentyQuantity = Number(quantity.textContent);
+      if (typeof currentyQuantity === "number" && currentyQuantity > 0) {
+        currentyQuantity--;
+        quantity.textContent = currentyQuantity;
+      }
+    });
+  }
+
+  if (increaseButton) {
+    increaseButton.addEventListener("click", () => {
+      let currentyQuantity = Number(quantity.textContent);
+      if (typeof currentyQuantity === "number") {
+        currentyQuantity++;
+        quantity.textContent = currentyQuantity;
+      }
+    });
+  }
+});
 
 // Utility Functions
 function removeAllChildNodes(parent) {
