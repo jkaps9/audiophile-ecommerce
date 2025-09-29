@@ -64,7 +64,7 @@
   justify-content: space-between;
   padding: 1em;
   background-color: map.get(variables.$colors, "light-grey");
-  max-width: 7.5rem;
+  min-width: 7.5rem;
 
   .decrease,
   .increase {
