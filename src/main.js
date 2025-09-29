@@ -1,11 +1,23 @@
 const cartButton = document.querySelector(".cart");
 const cartModal = document.querySelector(".cart-modal");
+const removeAllFromCartButton = document.querySelector(
+  ".cart-modal .btn--text",
+);
 
 if (cartButton) {
   cartButton.addEventListener("click", () => {
     if (cartModal) {
       cartModal.classList.toggle("visually-hidden");
     }
+  });
+}
+
+if (removeAllFromCartButton) {
+  // TODO: update #cart items
+  // TODO: update total amount
+  removeAllFromCartButton.addEventListener("click", () => {
+    const cartItems = document.querySelector(".cart-modal .items");
+    removeAllChildNodes(cartItems);
   });
 }
 
@@ -31,4 +43,11 @@ if (increaseButton) {
       quantity.textContent = currentyQuantity;
     }
   });
+}
+
+// Utility Functions
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
 }
