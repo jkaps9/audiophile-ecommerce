@@ -462,6 +462,12 @@ footer {
 }
 
 @media (min-width: 64rem) {
+  .hero,
+  footer {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
   header {
     .nav-toggle {
       visibility: hidden;
