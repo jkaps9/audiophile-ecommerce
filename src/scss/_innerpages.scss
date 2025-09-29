@@ -79,6 +79,7 @@ body:has(main > section.product-details) header {
 }
 
 .product-features {
+  margin: 5.5rem 0;
   .container {
     display: flex;
     flex-direction: column;
@@ -103,6 +104,19 @@ body:has(main > section.product-details) header {
     p {
       opacity: 0.5;
     }
+  }
+}
+
+.product-images {
+  margin-bottom: 9.5rem;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .product-gallery-image img {
+    border-radius: 0.5rem;
   }
 }
 
@@ -144,6 +158,20 @@ body:has(main > section.product-details) header {
 
     .features {
       width: 57%;
+    }
+  }
+
+  .product-images {
+    .container {
+      grid-template-columns: 1fr auto;
+      column-gap: 2em;
+      row-gap: 2rem;
+    }
+
+    .product-gallery-image:nth-child(3) {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      height: 100%;
     }
   }
 }
