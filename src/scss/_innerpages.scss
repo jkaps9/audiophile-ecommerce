@@ -78,6 +78,34 @@ body:has(main > section.product-details) header {
   }
 }
 
+.product-features {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(5.5rem, 4.6857rem + 3.4742vw, 7.8125rem);
+  }
+
+  h2 {
+    margin-bottom: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+  }
+
+  ul.includes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .includes__item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    p {
+      opacity: 0.5;
+    }
+  }
+}
+
 @media (min-width: 64rem) {
   .product-card {
     min-height: 35rem;
@@ -107,5 +135,15 @@ body:has(main > section.product-details) header {
   .product-details {
     margin-top: 10rem;
     margin-bottom: 12rem;
+  }
+
+  .product-features {
+    .container {
+      flex-direction: row;
+    }
+
+    .features {
+      width: 57%;
+    }
   }
 }
