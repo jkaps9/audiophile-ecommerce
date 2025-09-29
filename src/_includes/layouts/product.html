@@ -2,13 +2,7 @@
 {% extends "layouts/base.html" %}
 {% block content %}
   <section class="product-details">
-    <div class="container">
-      {% for product in collections.products %}
-        {% if product.id===4 %}
-          {% include "partials/product-card.html" %}
-        {% endif %}
-      {% endfor %}
-    </div>
+    <div class="container">{% include "partials/product-card.html" %}</div>
   </section>
 
   {% include "partials/category-cards.html" %}

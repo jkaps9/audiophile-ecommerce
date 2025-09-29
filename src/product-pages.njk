@@ -1,0 +1,10 @@
+---
+pagination:
+  data: data
+  size: 1
+  alias: product
+permalink: "products/{{ product.slug }}/"
+layout: "layouts/product.html"
+---
+
+{{ product.name }} is {{ product.description }}
