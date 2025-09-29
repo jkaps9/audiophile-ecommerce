@@ -4,7 +4,7 @@ const cartModal = document.querySelector(".cart-modal");
 if (cartButton) {
   cartButton.addEventListener("click", () => {
     if (cartModal) {
-      cartModal.classList.toggle("visible");
+      cartModal.classList.toggle("visually-hidden");
     }
   });
 }

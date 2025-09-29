@@ -1,6 +1,12 @@
 @use "variables";
 @use "sass:map";
 
+.visually-hidden {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
 .container {
   max-width: 1110px;
   width: 90%;
