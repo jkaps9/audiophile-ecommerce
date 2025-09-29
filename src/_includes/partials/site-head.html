@@ -2,25 +2,45 @@
   <div class="container">
     <div class="navbar">
       <button class="nav-toggle">
-        <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
-          <g fill="#FFF" fill-rule="evenodd">
+        <svg
+          width="16"
+          height="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="#FFF"
+            fill-rule="evenodd"
+          >
             <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
           </g>
         </svg>
       </button>
-      <a href="/" aria-label="{{ site.name }} - home" class="logo"
-        >{% include "partials/logo.svg" %}
+      <a
+        href="/"
+        aria-label="{{ site.name }} - home"
+        class="logo"
+      >
+        {% include "partials/logo.svg" %}
       </a>
-      <nav class="nav" role="navigation" aria-label="main">
+      <nav
+        class="nav"
+        role="navigation"
+        aria-label="main"
+      >
         <ul class="nav__list">
           {% for item in navigation.items %}
-          <li class="nav__item">
-            <a href="{{ item.url }}">{{ item.text }}</a>
-          </li>
+            <li class="nav__item">
+              <a href="{{ item.url }}">{{ item.text }}</a>
+            </li>
           {% endfor %}
         </ul>
       </nav>
-      <a href="#cart" class="cart"> {% include "partials/icon-cart.svg" %} </a>
+      <a
+        href="#cart"
+        class="cart"
+      >
+        {% include "partials/icon-cart.svg" %}
+      </a>
     </div>
   </div>
 </header>
