@@ -53,8 +53,15 @@ header {
     position: relative;
   }
 
-  a.cart:hover svg path {
+  .cart:hover svg path {
     fill: map.get(variables.$colors, "orange");
+  }
+
+  .cart {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
   }
 }
 
