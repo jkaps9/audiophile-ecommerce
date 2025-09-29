@@ -74,8 +74,85 @@ header {
   margin-top: 2rem;
   border-radius: 0.5rem;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  min-width: 23.5rem;
+
+  h6 {
+    margin: 0;
+  }
+
+  .image {
+    height: 4rem;
+    width: 4rem;
+
+    img {
+      border-radius: 0.5rem;
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .item.row .content {
+    margin: 0 auto 0 1rem;
+  }
+
+  .item-name {
+    font-weight: 700;
+    line-height: 1.6666;
+    opacity: 1;
+  }
+
+  .item-price {
+    opacity: 0.5;
+    font-size: 0.875rem;
+  }
+
+  .input--number {
+    min-width: 6rem;
+    padding: 0.5em;
+    padding-left: 0.75em;
+
+    button {
+      opacity: 0.25;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .total {
+    p {
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+  }
+
   button {
     border: none;
+  }
+
+  .btn--text {
+    text-transform: none;
+    text-decoration: underline;
+    font: inherit;
+    padding: 0;
+  }
+
+  .btn--solid {
+    margin-top: -0.5rem;
   }
 }
 

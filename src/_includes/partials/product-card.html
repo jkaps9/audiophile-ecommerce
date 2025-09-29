@@ -25,11 +25,7 @@
         <span class="price">$ {{ product.price | commaize }}</span>
       {% endif %}
       <div class="buttons">
-        <div class="input--number">
-          <button class="decrease">-</button>
-          <span class="quantity">1</span>
-          <button class="increase">+</button>
-        </div>
+        {% include "partials/number-button.html" %}
         <button
           class="btn--solid"
           type="button"

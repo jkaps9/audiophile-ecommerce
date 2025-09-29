@@ -118,3 +118,8 @@
 .nav__item:hover {
   color: map.get(variables.$colors, "orange");
 }
+
+.price {
+  font-weight: 700;
+  font-size: 1.2em;
+}
