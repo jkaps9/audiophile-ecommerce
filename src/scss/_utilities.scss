@@ -71,6 +71,10 @@
   .increase {
     background-color: transparent;
     border: none;
+
+    &:hover {
+      color: map.get(variables.$colors, "orange");
+    }
   }
 
   .decrease,
