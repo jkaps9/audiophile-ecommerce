@@ -1,0 +1,15 @@
+<div class="features">
+  <h2>Features</h2>
+  <p>{{ product.features }}</p>
+</div>
+<div class="in-the-box">
+  <h2>in-the-box</h2>
+  <ul class="includes">
+    {% for include in product.includes %}
+      <li class="includes__item">
+        <span class="accent-text">{{ include.quantity }}x</span>
+        <p>{{ include.item }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
