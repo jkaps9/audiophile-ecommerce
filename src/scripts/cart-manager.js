@@ -7,8 +7,16 @@ export class CartManager {
   }
 
   addItem(id, name, price, slug, quantity) {
-    const imageUri = `/assets/cart/${slug}.jpg`;
+    const imageUri = `/assets/cart/image-${slug}.jpg`;
     const newItem = new CartItem(id, name, price, quantity, imageUri);
     this.cart.addItem(newItem);
+  }
+
+  getItems() {
+    return this.cart.getItems();
+  }
+
+  getTotal() {
+    return this.cart.getTotal();
   }
 }
