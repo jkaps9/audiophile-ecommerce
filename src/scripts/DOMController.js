@@ -6,7 +6,13 @@ export class DOMController {
     this.addOnClicks();
   }
 
-  addOnClicks() {}
+  addOnClicks() {
+    this.cartButtonClick();
+    this.addToCartButtonClick();
+    const body = document.querySelector("body");
+    this.addOnClickToNumberButtons(body);
+    this.addOnClickToRemoveButton();
+  }
 
   cartButtonClick() {
     const cartButton = document.querySelector(".cart");
