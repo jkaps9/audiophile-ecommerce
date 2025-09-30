@@ -1,21 +1,6 @@
 import { CartManager } from "./scripts/cart-manager.js";
 
 const cartManager = new CartManager();
-
-// START TEST
-// const product = {
-//   others: {
-//     name: "XX99 Mark II Headphones",
-//   },
-//   price: 2999,
-//   slug: "xx99-mark-two-headphones",
-// };
-
-// console.log(cartManager.cart.getItems());
-// cartManager.addItem(product, 1);
-// console.log(cartManager.cart.getItems());
-// END TEST
-
 const addToCartButton = document.querySelector(".add-to-cart");
 
 if (addToCartButton) {
