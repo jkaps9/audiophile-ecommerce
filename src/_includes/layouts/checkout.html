@@ -1,0 +1,118 @@
+{% set isDetailPage = true %}
+{% extends "layouts/base.html" %}
+{% block content %}
+  <section class="checkout">
+    <div class="container">
+      <a
+        href="#"
+        class="btn--text go-back"
+      >
+        Go Back
+      </a>
+      <div class="card">
+        <h2>{{ pageTitle }}</h2>
+        <form class="checkout">
+          <div class="form-section">
+            <span class="topper section-header">Billing Details</span>
+            <div class="inputs">
+              <label>
+                Name
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  placeholder="Full Name"
+                />
+              </label>
+              <label>
+                Email Address
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="example@email.com"
+                />
+              </label>
+              <label>
+                Phone Number
+                <input
+                  type="text"
+                  id="phone-number"
+                  name="phone-number"
+                  placeholder="+1 202-555-0136"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <span class="topper section-header">Shipping Info</span>
+            <div class="inputs">
+              <label>
+                Address
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="1137 Williams Avenue"
+                />
+              </label>
+              <label>
+                Zip Code
+                <input
+                  type="number"
+                  id="zip"
+                  name="zip"
+                  placeholder="10001"
+                />
+              </label>
+              <label>
+                City
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="New York"
+                />
+              </label>
+              <label>
+                Country
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  placeholder="United States"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <span class="topper section-header">Payment Deatils</span>
+            <div class="inputs">
+              <label>Payment Method</label>
+              <label>
+                e-Money Number
+                <input
+                  type="number"
+                  id="emoney-number"
+                  name="emoney-number"
+                  placeholder="238521993"
+                />
+              </label>
+              <label>
+                e-Money PIN
+                <input
+                  type="number"
+                  id="emoney-pin"
+                  name="emoney-pin"
+                  placeholder="1234"
+                />
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock %}
