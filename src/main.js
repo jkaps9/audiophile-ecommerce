@@ -2,7 +2,8 @@ import { CartManager } from "./scripts/cart-manager.js";
 
 // init
 const cartManager = new CartManager();
-addOnClickToNumberButtons();
+const body = document.querySelector("body");
+addOnClickToNumberButtons(body);
 addOnClickToCartButton();
 addOnClickToRemoveButton();
 addOnClickToAddToCartButton();
@@ -54,7 +55,7 @@ function addOnClickToCartButton() {
             );
             itemList.appendChild(newCartItem);
           });
-          addOnClickToNumberButtons();
+          addOnClickToNumberButtons(cartModal);
           const totalAmount = document.querySelector(".total>.price");
           totalAmount.textContent = `$ ${cartManager.getTotal()}`;
         }
@@ -76,8 +77,8 @@ function addOnClickToRemoveButton() {
   }
 }
 
-function addOnClickToNumberButtons() {
-  const inputNumberButtons = document.querySelectorAll(".input--number");
+function addOnClickToNumberButtons(parentNode) {
+  const inputNumberButtons = parentNode.querySelectorAll(".input--number");
 
   inputNumberButtons.forEach((inputNumberButton) => {
     const decreaseButton = inputNumberButton.querySelector(".decrease");
