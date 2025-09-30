@@ -23,4 +23,9 @@ export class Cart {
       this.#total += subtotal;
     });
   }
+
+  emptyCart() {
+    this.#cartItems = [];
+    this.setTotal();
+  }
 }

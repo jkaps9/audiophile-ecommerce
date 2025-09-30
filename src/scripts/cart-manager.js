@@ -19,4 +19,8 @@ export class CartManager {
   getTotal() {
     return this.cart.getTotal();
   }
+
+  emptyCart() {
+    this.cart.emptyCart();
+  }
 }
