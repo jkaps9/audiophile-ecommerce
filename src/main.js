@@ -45,6 +45,8 @@ function addOnClickToCartButton() {
           const itemList = cartModal.querySelector(".items");
           removeCartItems();
           const cartItems = cartManager.getItems();
+          const itemCount = cartModal.querySelector("h6");
+          itemCount.textContent = `Cart (${cartItems.length})`;
           cartItems.forEach((cartItem) => {
             const newCartItem = createCartItem(
               cartItem.imageUri,
