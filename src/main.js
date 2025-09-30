@@ -2,6 +2,41 @@ import { CartManager } from "./scripts/cart-manager.js";
 
 const cartManager = new CartManager();
 
+// START TEST
+// const product = {
+//   others: {
+//     name: "XX99 Mark II Headphones",
+//   },
+//   price: 2999,
+//   slug: "xx99-mark-two-headphones",
+// };
+
+// console.log(cartManager.cart.getItems());
+// cartManager.addItem(product, 1);
+// console.log(cartManager.cart.getItems());
+// END TEST
+
+const addToCartButton = document.querySelector(".add-to-cart");
+
+if (addToCartButton) {
+  addToCartButton.addEventListener("click", () => {
+    const productId = Number(addToCartButton.getAttribute("data-product-id"));
+    const productName = addToCartButton.getAttribute("data-product-name");
+    const productPrice = addToCartButton.getAttribute("data-product-price");
+    const productSlug = addToCartButton.getAttribute("data-product-slug");
+    const quantity = Number(
+      document.querySelector(".input--number>.quantity").textContent,
+    );
+    cartManager.addItem(
+      productId,
+      productName,
+      productPrice,
+      productSlug,
+      quantity,
+    );
+  });
+}
+
 const cartButton = document.querySelector(".cart");
 const cartModal = document.querySelector(".cart-modal");
 const modalBackdrop = document.querySelector(".modal-backdrop");

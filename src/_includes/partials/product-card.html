@@ -27,8 +27,12 @@
       <div class="buttons">
         {% include "partials/number-button.html" %}
         <button
-          class="btn--solid"
+          class="btn--solid add-to-cart"
           type="button"
+          data-product-id="{{ product.id }}"
+          data-product-name="{{ product.name }}"
+          data-product-price="{{ product.price }}"
+          data-product-slug="{{ product.slug }}"
         >
           Add to cart
         </button>

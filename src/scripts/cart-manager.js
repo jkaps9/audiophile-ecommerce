@@ -6,14 +6,9 @@ export class CartManager {
     this.cart = new Cart();
   }
 
-  addItem(product, quantity) {
-    const imageUri = `/assets/cart/${product.slug}.jpg`;
-    const newItem = new CartItem(
-      product.others.name,
-      product.price,
-      quantity,
-      imageUri,
-    );
+  addItem(id, name, price, slug, quantity) {
+    const imageUri = `/assets/cart/${slug}.jpg`;
+    const newItem = new CartItem(id, name, price, quantity, imageUri);
     this.cart.addItem(newItem);
   }
 }
