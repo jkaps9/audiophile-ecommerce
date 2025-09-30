@@ -17,7 +17,6 @@ export class DOMController {
   cartButtonClick() {
     const cartButton = document.querySelector(".cart");
     if (cartButton) {
-      console.log("setting on click");
       cartButton.addEventListener("click", () => {
         this.toggleCartModal();
         const cartModal = document.querySelector(".cart-modal");
@@ -138,8 +137,6 @@ export class DOMController {
     const quantity = Number(
       document.querySelector(".input--number>.quantity").textContent,
     );
-    const quant = document.querySelector(".input--number>.quantity");
-    console.log(quant);
 
     this.cartManager.addItem(
       productId,
