@@ -7,23 +7,21 @@ export class DOMController {
   }
 
   addOnClicks() {
-
     this.cartButtonClick();
     this.addToCartButtonClick();
     const body = document.querySelector("body");
     this.addOnClickToNumberButtons(body);
     this.addOnClickToRemoveButton();
-	  this.navOnClick();
+    this.navOnClick();
   }
 
-navOnClick() {
-	  
-	const navToggle = document.querySelector(".nav-toggle");
-	const nav = document.querySelector(".nav");
-	navToggle.addEventListener('click',()=>{
-	nav.classList.toggle("visible");	
-	});
-}
+  navOnClick() {
+    const navToggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav");
+    navToggle.addEventListener("click", () => {
+      nav.classList.toggle("visible");
+    });
+  }
 
   cartButtonClick() {
     const cartButton = document.querySelector(".cart");

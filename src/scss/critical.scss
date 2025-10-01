@@ -51,6 +51,16 @@ header {
     visibility: visible;
     height: auto;
     top: 100%;
+    left: 0;
+    right: 0;
+    margin-inline: calc(-1 * 5vw);
+    padding: 2rem 2rem 4rem;
+    background-color: rgba(map.get(variables.$colors, "black"), 0.9);
+   /* color: map.get(variables.$colors, "black");*/
+
+    .nav__list {
+      flex-direction: column;
+    }
   }
 
   .cart:hover svg path {
