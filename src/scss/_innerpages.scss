@@ -1,8 +1,14 @@
 @use "variables";
 @use "sass:map";
 
+header:has(~ main>.page-header){
+  position: sticky;
+  background-color: map.get(variables.$colors, "black");
+}
+
 .page-header {
-  min-height: clamp(12rem, 8.831rem + 13.5211vw, 21rem);
+ /* min-height: clamp(12rem, 8.831rem + 13.5211vw, 21rem);*/
+  padding: 2rem 0;
   background-color: map.get(variables.$colors, "black");
   color: map.get(variables.$colors, "white");
   display: flex;
@@ -61,7 +67,7 @@
 
 body:has(main > section.product-details) header,
 body:has(main > section.checkout) header {
-  position: relative;
+  position: sticky;
   background-color: map.get(variables.$colors, "black");
 }
 
