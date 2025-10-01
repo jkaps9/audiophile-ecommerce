@@ -56,7 +56,7 @@ header {
     margin-inline: calc(-1 * 5vw);
     padding: 2rem 2rem 4rem;
     background-color: rgba(map.get(variables.$colors, "black"), 0.9);
-   /* color: map.get(variables.$colors, "black");*/
+    /* color: map.get(variables.$colors, "black");*/
 
     .nav__list {
       flex-direction: column;
