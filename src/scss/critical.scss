@@ -50,7 +50,7 @@ header {
   .nav.visible {
     visibility: visible;
     height: auto;
-    position: relative;
+    top: 100%;
   }
 
   .cart:hover svg path {
