@@ -133,10 +133,15 @@ export class DOMController {
     if (addToCartButton) {
       addToCartButton.addEventListener("click", () => {
         this.addItemToCart();
+	      this.test();
       });
     }
   }
+ test() {
+	const qty = document.querySelector(".buttons>.input--number>.quantity");
+	 alert(qty.textContent)
 
+ }
   addItemToCart() {
     const addToCartButton = document.querySelector(".add-to-cart");
     const productId = Number(addToCartButton.getAttribute("data-product-id"));
@@ -144,7 +149,7 @@ export class DOMController {
     const productPrice = addToCartButton.getAttribute("data-product-price");
     const productSlug = addToCartButton.getAttribute("data-product-slug");
     const quantity = Number(
-      document.querySelector(".input--number>.quantity").textContent,
+      document.querySelector(".buttons>.input--number>.quantity").textContent,
     );
 
     this.cartManager.addItem(
