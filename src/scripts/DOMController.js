@@ -65,7 +65,7 @@ export class DOMController {
 
   updateCartTotal() {
     const totalAmount = document.querySelector(".total>.price");
-    totalAmount.textContent = `$ ${this.cartManager.getTotal()}`;
+    totalAmount.textContent = `$ ${this.commaize(this.cartManager.getTotal())}`;
   }
 
   createCartItem(imageSrc, altText, itemName, itemPrice, quantity) {
@@ -88,7 +88,7 @@ export class DOMController {
     nameP.textContent = itemName;
     const priceP = document.createElement("p");
     priceP.className = "item-price";
-    priceP.textContent = itemPrice;
+    priceP.textContent = `$ ${this.commaize(itemPrice)}`;
     contentDiv.appendChild(nameP);
     contentDiv.appendChild(priceP);
 
@@ -200,5 +200,9 @@ export class DOMController {
         this.updateCartTotal();
       });
     }
+  }
+
+  commaize(number) {
+    return new Intl.NumberFormat().format(number);
   }
 }
