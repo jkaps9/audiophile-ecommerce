@@ -1,14 +1,18 @@
 <footer>
   <div class="container">
-    <a href="/" aria-label="{{ site.name }} - home" class="logo"
-      >{% include "partials/logo.svg" %}
+    <a
+      href="/"
+      aria-label="{{ site.name }} - home"
+      class="logo"
+    >
+      {% include "partials/logo.svg" %}
     </a>
 
     <ul class="nav__list">
       {% for item in navigation.items %}
-      <li class="nav__item">
-        <a href="{{ item.url }}">{{ item.text }}</a>
-      </li>
+        <li class="nav__item">
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        </li>
       {% endfor %}
     </ul>
 
@@ -23,19 +27,19 @@
 
     <ul class="socials__list">
       <li>
-        <a href="https://facebook.com"
-          >{% include "partials/icon-facebook.svg" %}</a
-        >
+        <a href="https://facebook.com">
+          {% include "partials/icon-facebook.svg" %}
+        </a>
       </li>
       <li>
-        <a href="https://twitter.com"
-          >{% include "partials/icon-twitter.svg" %}</a
-        >
+        <a href="https://twitter.com">
+          {% include "partials/icon-twitter.svg" %}
+        </a>
       </li>
       <li>
-        <a href="https://instagram.com"
-          >{% include "partials/icon-instagram.svg" %}</a
-        >
+        <a href="https://instagram.com">
+          {% include "partials/icon-instagram.svg" %}
+        </a>
       </li>
     </ul>
   </div>
