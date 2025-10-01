@@ -75,7 +75,8 @@ header {
   }
 }
 
-.cart-modal {
+.cart-modal,
+.checkout-summary-card {
   background-color: map.get(variables.$colors, "white");
   color: map.get(variables.$colors, "black");
   position: absolute;
@@ -160,6 +161,11 @@ header {
     text-align: center;
   }
 }
+
+  .checkout-summary-card {
+    position: relative;
+  }
+
 
 body {
   position: relative;

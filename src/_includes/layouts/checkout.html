@@ -9,7 +9,7 @@
       >
         Go Back
       </a>
-      <div class="card">
+      <div class="card checkout-form-card">
         <h2>{{ pageTitle }}</h2>
         <form class="checkout">
           <div class="form-section">
@@ -112,6 +112,45 @@
             </div>
           </div>
         </form>
+      </div>
+
+      <div class="card checkout-summary-card">
+        <div class="row">
+          <h6>Cart (3)</h6>
+          <button class="btn--text">Remove all</button>
+        </div>
+        <div class="items">
+          <div class="item row">
+            <div class="image">
+              <img
+                src="/assets/cart/image-xx99-mark-two-headphones.jpg"
+                alt="XX99 Mark Two Headphones"
+              />
+            </div>
+            <div class="content">
+              <p class="item-name">XX99 MK II</p>
+              <p class="item-price">$2,999</p>
+            </div>
+            {% include "partials/number-button.html" %}
+          </div>
+        </div>
+        <div class="total row">
+          <p>Total</p>
+          <span class="price total">$ 5,396</span>
+          <p>Shipping</p>
+          <span class="price shipping">$ 5,396</span>
+          <p>VAT (Included)</p>
+          <span class="price vat">$ 5,396</span>
+          <p>Grand Total</p>
+          <span class="price grand-total">$ 5,396</span>
+        </div>
+
+        <a
+          href="/checkout/"
+          class="btn--solid"
+        >
+          Continue & Pay
+        </a>
       </div>
     </div>
   </section>
