@@ -9,155 +9,157 @@
       >
         Go Back
       </button>
-      <div class="card checkout-form-card">
-        <h2>{{ pageTitle }}</h2>
-        <form class="checkout">
-          <div class="form-section">
-            <span class="topper section-header">Billing Details</span>
-            <div class="inputs">
-              <label>
-                Name
-                <input
-                  type="text"
-                  id="full-name"
-                  name="full-name"
-                  placeholder="Full Name"
-                />
-              </label>
-              <label>
-                Email Address
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="example@email.com"
-                />
-              </label>
-              <label>
-                Phone Number
-                <input
-                  type="text"
-                  id="phone-number"
-                  name="phone-number"
-                  placeholder="+1 202-555-0136"
-                />
-              </label>
+      <div class="flex-container">
+        <div class="card checkout-form-card">
+          <h2>{{ pageTitle }}</h2>
+          <form class="checkout">
+            <div class="form-section">
+              <span class="topper section-header">Billing Details</span>
+              <div class="inputs">
+                <label>
+                  Name
+                  <input
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    placeholder="Full Name"
+                  />
+                </label>
+                <label>
+                  Email Address
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                  />
+                </label>
+                <label>
+                  Phone Number
+                  <input
+                    type="text"
+                    id="phone-number"
+                    name="phone-number"
+                    placeholder="+1 202-555-0136"
+                  />
+                </label>
+              </div>
             </div>
-          </div>
 
-          <div class="form-section">
-            <span class="topper section-header">Shipping Info</span>
-            <div class="inputs">
-              <label>
-                Address
-                <input
-                  type="text"
-                  id="address"
-                  name="address"
-                  placeholder="1137 Williams Avenue"
-                />
-              </label>
-              <label>
-                Zip Code
-                <input
-                  type="number"
-                  id="zip"
-                  name="zip"
-                  placeholder="10001"
-                />
-              </label>
-              <label>
-                City
-                <input
-                  type="text"
-                  id="city"
-                  name="city"
-                  placeholder="New York"
-                />
-              </label>
-              <label>
-                Country
-                <input
-                  type="text"
-                  id="country"
-                  name="country"
-                  placeholder="United States"
-                />
-              </label>
+            <div class="form-section">
+              <span class="topper section-header">Shipping Info</span>
+              <div class="inputs">
+                <label>
+                  Address
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="1137 Williams Avenue"
+                  />
+                </label>
+                <label>
+                  Zip Code
+                  <input
+                    type="number"
+                    id="zip"
+                    name="zip"
+                    placeholder="10001"
+                  />
+                </label>
+                <label>
+                  City
+                  <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="New York"
+                  />
+                </label>
+                <label>
+                  Country
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="United States"
+                  />
+                </label>
+              </div>
             </div>
-          </div>
 
-          <div class="form-section">
-            <span class="topper section-header">Payment Deatils</span>
-            <div class="inputs">
-              <label>Payment Method</label>
-              <label>
-                e-Money Number
-                <input
-                  type="number"
-                  id="emoney-number"
-                  name="emoney-number"
-                  placeholder="238521993"
-                />
-              </label>
-              <label>
-                e-Money PIN
-                <input
-                  type="number"
-                  id="emoney-pin"
-                  name="emoney-pin"
-                  placeholder="1234"
-                />
-              </label>
+            <div class="form-section">
+              <span class="topper section-header">Payment Deatils</span>
+              <div class="inputs">
+                <label>Payment Method</label>
+                <label>
+                  e-Money Number
+                  <input
+                    type="number"
+                    id="emoney-number"
+                    name="emoney-number"
+                    placeholder="238521993"
+                  />
+                </label>
+                <label>
+                  e-Money PIN
+                  <input
+                    type="number"
+                    id="emoney-pin"
+                    name="emoney-pin"
+                    placeholder="1234"
+                  />
+                </label>
+              </div>
             </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="card checkout-summary-card">
-        <div class="row">
-          <h6>Summary</h6>
-        </div>
-        <div class="items row">
-          <div class="item row">
-            <div class="image">
-              <img
-                src="/assets/cart/image-xx99-mark-two-headphones.jpg"
-                alt="XX99 Mark Two Headphones"
-              />
-            </div>
-            <div class="content">
-              <p class="item-name">XX99 MK II</p>
-              <p class="item-price">$ 2,999</p>
-            </div>
-            <p class="quantity">x1</p>
-          </div>
-        </div>
-        <div class="totals row">
-          <div class="total row">
-            <p>Total</p>
-            <span class="price total">$ 5,396</span>
-          </div>
-          <div class="total row">
-            <p>Shipping</p>
-            <span class="price shipping">$ 50</span>
-          </div>
-          <div class="total row">
-            <p>VAT (Included)</p>
-            <span class="price vat">$ 1,079</span>
-          </div>
-          <div class="total row grand-total-col">
-            <p>Grand Total</p>
-            <span class="price grand-total accent-text">$ 5,446</span>
-          </div>
+          </form>
         </div>
 
-        <button
-          href="/checkout/"
-          class="btn--solid"
-        >
-          Continue & Pay
-        </button>
+        <div class="card checkout-summary-card">
+          <div class="row">
+            <h6>Summary</h6>
+          </div>
+          <div class="items row">
+            <div class="item row">
+              <div class="image">
+                <img
+                  src="/assets/cart/image-xx99-mark-two-headphones.jpg"
+                  alt="XX99 Mark Two Headphones"
+                />
+              </div>
+              <div class="content">
+                <p class="item-name">XX99 MK II</p>
+                <p class="item-price">$ 2,999</p>
+              </div>
+              <p class="quantity">x1</p>
+            </div>
+          </div>
+          <div class="totals row">
+            <div class="total row">
+              <p>Total</p>
+              <span class="price total">$ 5,396</span>
+            </div>
+            <div class="total row">
+              <p>Shipping</p>
+              <span class="price shipping">$ 50</span>
+            </div>
+            <div class="total row">
+              <p>VAT (Included)</p>
+              <span class="price vat">$ 1,079</span>
+            </div>
+            <div class="total row grand-total-col">
+              <p>Grand Total</p>
+              <span class="price grand-total accent-text">$ 5,446</span>
+            </div>
+          </div>
+
+          <button
+            href="/checkout/"
+            class="btn--solid"
+          >
+            Continue & Pay
+          </button>
+        </div>
       </div>
     </div>
   </section>
