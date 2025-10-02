@@ -139,6 +139,7 @@ header {
   }
 
   .total {
+    width: 100%;
     p {
       text-transform: uppercase;
       opacity: 0.5;
@@ -162,10 +163,9 @@ header {
   }
 }
 
-  .checkout-summary-card {
-    position: relative;
-  }
-
+.checkout-summary-card {
+  position: relative;
+}
 
 body {
   position: relative;
