@@ -116,10 +116,9 @@
 
       <div class="card checkout-summary-card">
         <div class="row">
-          <h6>Cart (3)</h6>
-          <button class="btn--text">Remove all</button>
+          <h6>Summary</h6>
         </div>
-        <div class="items">
+        <div class="items row">
           <div class="item row">
             <div class="image">
               <img
@@ -129,34 +128,36 @@
             </div>
             <div class="content">
               <p class="item-name">XX99 MK II</p>
-              <p class="item-price">$2,999</p>
+              <p class="item-price">$ 2,999</p>
             </div>
-            {% include "partials/number-button.html" %}
+            <p class="quantity">x1</p>
           </div>
         </div>
-        <div class="total row">
-          <p>Total</p>
-          <span class="price total">$ 5,396</span>
-        </div>
-        <div class="total row">
-          <p>Shipping</p>
-          <span class="price shipping">$ 5,396</span>
-        </div>
-        <div class="total row">
-          <p>VAT (Included)</p>
-          <span class="price vat">$ 5,396</span>
-        </div>
-        <div class="total row">
-          <p>Grand Total</p>
-          <span class="price grand-total">$ 5,396</span>
+        <div class="totals row">
+          <div class="total row">
+            <p>Total</p>
+            <span class="price total">$ 5,396</span>
+          </div>
+          <div class="total row">
+            <p>Shipping</p>
+            <span class="price shipping">$ 50</span>
+          </div>
+          <div class="total row">
+            <p>VAT (Included)</p>
+            <span class="price vat">$ 1,079</span>
+          </div>
+          <div class="total row grand-total-col">
+            <p>Grand Total</p>
+            <span class="price grand-total accent-text">$ 5,446</span>
+          </div>
         </div>
 
-        <a
+        <button
           href="/checkout/"
           class="btn--solid"
         >
           Continue & Pay
-        </a>
+        </button>
       </div>
     </div>
   </section>
