@@ -127,7 +127,11 @@ body:has(main > section.checkout) header {
     clamp(6.0625rem, 5.0942rem + 4.1315vw, 8.8125rem);
 
   .go-back {
+    display: block;
+    border: none;
     padding: 0;
+    margin: 1rem 0 1.5rem;
+    text-transform: none;
   }
 
   .topper {
