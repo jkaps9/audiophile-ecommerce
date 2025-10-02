@@ -15,12 +15,14 @@
     />
   </picture>
   <div class="content">
-    {% if product.new %}
+    {% if product.new and showDetails %}
       <span class="topper">New product</span>
     {% endif %}
     <h1>{{ product.name }}</h1>
+    {% if showDetails %}
     <p>{{ product.description }}</p>
-    {% if isDetailPage %}
+    {% endif %}
+    {% if isDetailPage and showDetails %}
       {% if product.price %}
         <span class="price">$ {{ product.price | commaize }}</span>
       {% endif %}
