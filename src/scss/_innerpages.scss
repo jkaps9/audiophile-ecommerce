@@ -348,8 +348,21 @@ body:has(main > section.checkout) header {
       border-color: map.get(variables.$colors, "orange");
     }
 
+    .cod-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+
+      p {
+        opacity: 0.5;
+      }
+    }
+
     .inputs:has(input[type="radio"]#cash-on-delivery:checked) .emoney,
-    .inputs:not(:has(input[type="radio"]:checked)) .emoney {
+    .inputs:not(:has(input[type="radio"]:checked)) .emoney,
+    .inputs:has(input[type="radio"]#e-money:checked) .cod-row,
+    .inputs:not(:has(input[type="radio"]:checked)) .cod-row {
       visibility: hidden;
       height: 0;
       position: absolute;
@@ -399,7 +412,8 @@ body:has(main > section.checkout) header {
         grid-template-columns: repeat(2, 1fr);
 
         label:has(input#address),
-        .radio-set {
+        .radio-set,
+        .cod-row {
           grid-column: span 2;
         }
 
