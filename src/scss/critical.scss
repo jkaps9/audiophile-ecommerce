@@ -75,135 +75,9 @@ header {
   }
 }
 
-.cart-modal,
-.checkout-summary-card {
-  background-color: map.get(variables.$colors, "white");
-  color: map.get(variables.$colors, "black");
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  margin-top: 2rem;
-  margin-inline: auto;
-  width: 100%;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  h6 {
-    margin: 0;
-  }
-
-  .image {
-    height: 4rem;
-    width: 4rem;
-
-    img {
-      border-radius: 0.5rem;
-    }
-  }
-
-  .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .items {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .item.row .content {
-    margin: 0 auto 0 1rem;
-  }
-
-  .item-name {
-    font-weight: 700;
-    line-height: 1.6666;
-    opacity: 1;
-  }
-
-  .item-price {
-    opacity: 0.5;
-    font-size: 0.875rem;
-  }
-
-  .input--number {
-    min-width: 6rem;
-    padding: 0.5em;
-    padding-left: 0.75em;
-  }
-
-  .total {
-    p {
-      text-transform: uppercase;
-      opacity: 0.5;
-    }
-  }
-
-  button {
-    border: none;
-  }
-
-  .btn--text {
-    text-transform: none;
-    text-decoration: underline;
-    font: inherit;
-    padding: 0;
-  }
-
-  .btn--solid {
-    margin-top: -0.5rem;
-    text-align: center;
-  }
-}
-
-.checkout-summary-card {
-  position: relative;
-  align-items: flex-start;
-
-  .item-price {
-    font-weight: 700;
-  }
-
-  .quantity {
-    font-weight: 700;
-    opacity: 0.5;
-  }
-
-  .totals {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    .grand-total-col {
-      margin-top: 1rem;
-    }
-  }
-
-  button {
-    width: 100%;
-  }
-}
-
 body {
   position: relative;
-}
-
-.modal-backdrop {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  background-color: black;
-  opacity: 0.4;
-  z-index: 999;
+  background-color: map.get(variables.$colors, "off-white");
 }
 
 /* HERO */
@@ -414,12 +288,6 @@ footer {
 }
 
 @media (min-width: 48rem) {
-  .cart-modal {
-    min-width: 23.5rem;
-    width: fit-content;
-    left: auto;
-  }
-
   .hero {
     background-image: url("/assets/home/tablet/image-header.jpg");
     min-height: 45.5rem;
