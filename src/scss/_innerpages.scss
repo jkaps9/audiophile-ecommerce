@@ -257,12 +257,23 @@ body:has(main > section.checkout) header {
   }
 
   input {
-    border: 1px solid map.get(variables.$colors, "light-grey");
+    border: 1px solid map.get(variables.$colors, "medium-grey");
     border-radius: 0.5em;
     padding: 1rem 1.5rem;
     line-height: 1;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    width: 100%;
     &::placeholder {
       opacity: 0.4;
+    }
+
+    &:hover {
+      border-color: map.get(variables.$colors, "pale-orange");
+    }
+
+    &:focus {
+      outline-color: map.get(variables.$colors, "orange");
     }
   }
 
@@ -285,13 +296,6 @@ body:has(main > section.checkout) header {
       width: 100%;
 
       accent-color: map.get(variables.$colors, "orange");
-    }
-
-    input {
-      border: 1px solid map.get(variables.$colors, "medium-grey");
-      margin-top: 0.5rem;
-      font-size: 0.875rem;
-      width: 100%;
     }
 
     .inputs {
@@ -336,7 +340,7 @@ body:has(main > section.checkout) header {
       }
 
       &:hover {
-        border-color: map.get(variables.$colors, "orange");
+        border-color: map.get(variables.$colors, "pale-orange");
       }
     }
 
