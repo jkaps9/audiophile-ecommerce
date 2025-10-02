@@ -122,6 +122,19 @@ body:has(main > section.checkout) header {
   }
 }
 
+.recommended-products {
+  margin-bottom: 9.5rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
 .cart-modal {
   margin-top: 2rem;
 }
@@ -486,6 +499,12 @@ body:has(main > section.checkout) header {
       grid-column: 2;
       grid-row: 1 / span 2;
       height: 100%;
+    }
+  }
+
+  .recommended-products {
+    .card-container {
+      flex-direction: row;
     }
   }
 

@@ -1,14 +1,14 @@
 {% set isDetailPage = true %}
 {% extends "layouts/base.html" %}
 {% block content %}
-{% set showDetails=true %}
+  {% set showDetails=true %}
   <section class="product-details">
     <div class="container">{% include "partials/product-card.html" %}</div>
   </section>
   <section class="product-features">
     <div class="container">{% include "partials/product-features.html" %}</div>
   </section>
-         
+
   <section class="product-images">
     <div class="container">
       {% for key, image in product.gallery %}
@@ -33,12 +33,15 @@
     </div>
   </section>
   <section class="recommended-products">
-	  <div class="container">
-		  {% set showDetails=false %}
-	      {% for item in product.others %}
-                {% include "partials/product-card.html" %}
-	      {% endfor %}
-	  </div>
+    <div class="container">
+      <h2>You may also like</h2>
+      <div class="card-container">
+        {% set showDetails=false %}
+        {% for product in product.others %}
+          {% include "partials/product-card.html" %}
+        {% endfor %}
+      </div>
+    </div>
   </section>
   {% include "partials/category-cards.html" %}
   {% include "partials/about.html" %}
