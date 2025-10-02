@@ -380,6 +380,33 @@ body:has(main > section.checkout) header {
     width: fit-content;
     left: auto;
   }
+
+  .checkout {
+    .checkout-form-card {
+      .inputs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        label:has(input#address),
+        .radio-set {
+          grid-column: span 2;
+        }
+
+        .radio-set {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          .radio-item {
+            grid-column: 2;
+          }
+
+          legend {
+            margin-bottom: -1rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 64rem) {
