@@ -91,7 +91,39 @@
             <div class="form-section">
               <span class="topper form-section-header">Payment Deatils</span>
               <div class="inputs">
-                <label>Payment Method</label>
+                <fieldset class="radio-set">
+                  <legend>Payment Method</legend>
+                  <div class="radio-item">
+                    <label for="e-money">
+                      <input
+                        type="radio"
+                        id="e-money"
+                        name="payment-method"
+                        value="e-money"
+                        required
+                      />
+                      e-Money
+                    </label>
+                  </div>
+                  <div class="radio-item">
+                    <label
+                      for="cash-on-delivery"
+                      class=""
+                    >
+                      <input
+                        type="radio"
+                        id="cash-on-delivery"
+                        name="payment-method"
+                        value="cash-on-delivery"
+                        required
+                      />
+                      Cash on Delivery
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="inputs">
                 <label>
                   e-Money Number
                   <input
