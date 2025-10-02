@@ -272,6 +272,32 @@ body:has(main > section.checkout) header {
 
   .checkout-form-card {
     background-color: map.get(variables.$colors, "white");
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+
+    .checkout-form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    input {
+      border: 1px solid map.get(variables.$colors, "medium-grey");
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-section-header {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
   }
 
   .checkout-summary-card {
