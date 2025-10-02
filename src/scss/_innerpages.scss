@@ -347,6 +347,13 @@ body:has(main > section.checkout) header {
     .radio-item:has(input[type="radio"]:checked) {
       border-color: map.get(variables.$colors, "orange");
     }
+
+    .inputs:has(input[type="radio"]#cash-on-delivery:checked) .emoney,
+    .inputs:not(:has(input[type="radio"]:checked)) .emoney {
+      visibility: hidden;
+      height: 0;
+      position: absolute;
+    }
   }
 
   .checkout-summary-card {
