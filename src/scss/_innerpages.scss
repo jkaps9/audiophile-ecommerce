@@ -281,6 +281,7 @@ body:has(main > section.checkout) header {
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      width: 100%;
 
       accent-color: map.get(variables.$colors, "orange");
     }
@@ -289,6 +290,7 @@ body:has(main > section.checkout) header {
       border: 1px solid map.get(variables.$colors, "medium-grey");
       margin-top: 0.5rem;
       font-size: 0.875rem;
+      width: 100%;
     }
 
     .inputs {
