@@ -246,6 +246,7 @@ body:has(main > section.checkout) header {
   label,
   input {
     display: block;
+    cursor: pointer;
   }
 
   label,
@@ -325,7 +326,6 @@ body:has(main > section.checkout) header {
       label {
         display: flex;
         align-items: center;
-        cursor: pointer;
         padding: 1.25rem;
       }
 
