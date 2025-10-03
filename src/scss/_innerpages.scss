@@ -134,6 +134,10 @@ body:has(main > section.checkout) header {
     flex-direction: column;
     gap: 3rem;
   }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 .cart-modal {
   margin-top: 2rem;
@@ -412,10 +416,36 @@ body:has(main > section.checkout) header {
 }
 
 @media (min-width: 48rem) {
+  .product-card {
+    min-height: 35rem;
+    flex-direction: row;
+    gap: clamp(4.3125rem, 0.3482rem + 8.2589vw, 7.7813rem);
+    .content {
+      max-width: 40%;
+      text-align: start;
+      align-items: flex-start;
+      gap: 2rem;
+
+      .topper {
+        margin-bottom: -1rem;
+      }
+
+      a.btn--solid {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
   .cart-modal {
     min-width: 23.5rem;
     width: fit-content;
     left: auto;
+  }
+
+  .recommended-products {
+    .card-container {
+      flex-direction: row;
+    }
   }
 
   .checkout {
@@ -448,26 +478,6 @@ body:has(main > section.checkout) header {
 }
 
 @media (min-width: 64rem) {
-  .product-card {
-    min-height: 35rem;
-    flex-direction: row;
-    gap: 7.8125rem;
-    .content {
-      max-width: 40%;
-      text-align: start;
-      align-items: flex-start;
-      gap: 2rem;
-
-      .topper {
-        margin-bottom: -1rem;
-      }
-
-      a.btn--solid {
-        margin-top: 0.5rem;
-      }
-    }
-  }
-
   .product-card:nth-child(even) {
     flex-direction: row-reverse;
   }
@@ -499,12 +509,6 @@ body:has(main > section.checkout) header {
       grid-column: 2;
       grid-row: 1 / span 2;
       height: 100%;
-    }
-  }
-
-  .recommended-products {
-    .card-container {
-      flex-direction: row;
     }
   }
 
