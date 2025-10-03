@@ -416,22 +416,24 @@ body:has(main > section.checkout) header {
 }
 
 @media (min-width: 48rem) {
-  .product-card {
-    min-height: 35rem;
-    flex-direction: row;
-    gap: clamp(4.3125rem, 0.3482rem + 8.2589vw, 7.7813rem);
-    .content {
-      max-width: 40%;
-      text-align: start;
-      align-items: flex-start;
-      gap: 2rem;
+  .product-details {
+    .product-card {
+      min-height: 35rem;
+      flex-direction: row;
+      gap: clamp(4.3125rem, 0.3482rem + 8.2589vw, 7.7813rem);
+      .content {
+        max-width: 40%;
+        text-align: start;
+        align-items: flex-start;
+        gap: 2rem;
 
-      .topper {
-        margin-bottom: -1rem;
-      }
+        .topper {
+          margin-bottom: -1rem;
+        }
 
-      a.btn--solid {
-        margin-top: 0.5rem;
+        a.btn--solid {
+          margin-top: 0.5rem;
+        }
       }
     }
   }
@@ -445,6 +447,8 @@ body:has(main > section.checkout) header {
   .recommended-products {
     .card-container {
       flex-direction: row;
+      justify-content: space-between;
+      gap: clamp(0.6875rem, -0.6696rem + 2.8274vw, 1.875rem);
     }
   }
 
@@ -478,8 +482,10 @@ body:has(main > section.checkout) header {
 }
 
 @media (min-width: 64rem) {
-  .product-card:nth-child(even) {
-    flex-direction: row-reverse;
+  .product-details {
+    .product-card:nth-child(even) {
+      flex-direction: row-reverse;
+    }
   }
 
   .products,
