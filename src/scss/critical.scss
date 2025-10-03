@@ -147,7 +147,7 @@ body {
 
 /* Featured Products */
 .featured-products {
-  margin: clamp(7.5rem, 5.7394rem + 7.5117vw, 12.5rem) 0;
+  margin: clamp(7.5rem, 5.8275rem + 7.1362vw, 12.25rem) 0;
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -305,6 +305,7 @@ footer {
 
     .category {
       flex-grow: 1;
+      margin-bottom: 0;
     }
   }
 
