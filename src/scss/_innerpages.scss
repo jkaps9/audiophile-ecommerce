@@ -482,6 +482,10 @@ body:has(main > section.checkout) header {
 }
 
 @media (min-width: 64rem) {
+  .page-header {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   .product-details {
     .product-card:nth-child(even) {
       flex-direction: row-reverse;
